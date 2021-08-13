@@ -1,0 +1,42 @@
+{
+    "name": "charlgottschalk/feature-toggle-lumen",
+    "description": "Provides a simple implementation for creating and managing feature toggles",
+    "type": "library",
+    "keywords": [
+        "feature",
+        "features",
+        "feature toggle",
+        "feature toggles",
+        "feature toggling",
+        "feature flags",
+        "toggle",
+        "toggles"
+    ],
+	"license": "MIT",
+    "authors": [
+        {
+            "name": "Charl Gottschalk",
+            "email": "2204385+CharlGottschalk@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/lumen-framework": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CharlGottschalk\\FeatureToggleLumen\\": "src"
+        },
+        "files": [
+            "helpers/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CharlGottschalk\\FeatureToggleLumen\\FeatureToggleServiceProvider"
+            ]
+        }
+    }
+}
