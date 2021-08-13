@@ -1,9 +1,6 @@
 
 # Laravel Feature Toggle for Lumen
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/charlgottschalk/feature-toggle-lumen.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle-lumen)
-[![Total Downloads](https://img.shields.io/packagist/dt/charlgottschalk/feature-toggle-lumen.svg?style=flat-square)](https://packagist.org/packages/charlgottschalk/feature-toggle-lumen)
-
 Feature toggling is a coding strategy used along with source control to make it easier to continuously integrate and deploy. 
 The idea of the toggles essentially prevents sections of code from executing if a feature is disabled.
 
@@ -20,9 +17,30 @@ Oh, and it supports user roles, your user roles.
 ---
 
 #### 1. Install the package using composer:
+In your `composer.json` add the following to the `repositories`:
 ```
-$ composer require charlgottschalk\feature-toggle-lumen
+// composer.json
+{
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/dencreative/feature-toggle-lumen"
+		}
+	]
+}
 ```
+
+Then add the following to `require`:
+```
+// composer.json
+{
+	"require": {
+        "dencreative/feature-toggle-lumen": "v1.0.*"
+    }
+}
+```
+
+Now run `$ composer update`.
 
 The package should be auto-discovered by Lumen, but if it's not, simply register the service provider in your `bootstrap/app.php`:
 ```php
